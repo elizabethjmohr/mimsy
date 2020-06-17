@@ -824,7 +824,7 @@ mimsy <- function(data, baromet.press, units, bg.correct = FALSE,
 
       # create list of sample blocks
       datalist[[groupNo]] <- group.block
-
+    }
       # convert datalist from list to dataframe this dataframe will become the
       # 'detailed' data output to the user
       data <- dplyr::bind_rows(datalist)
@@ -855,7 +855,7 @@ mimsy <- function(data, baromet.press, units, bg.correct = FALSE,
       data$INTERPOLATED.calfactor_O2Ar <-
         (data$INTERPOLATED.calslope_O2Ar * data$CollectionTemp) +
         data$INTERPOLATED.calintercept_O2Ar
-    }
+
   } # Close 2-point temperature calculation
 
 
